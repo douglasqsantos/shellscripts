@@ -1,0 +1,41 @@
+# http://httpredir.debian.org/
+# OFFICIAL REPOSITORY
+deb http://ftp.br.debian.org/debian jessie main contrib non-free
+deb-src http://ftp.br.debian.org/debian jessie main contrib non-free
+#deb http://httpredir.debian.org/debian jessie main contrib non-free
+#deb-src http://httpredir.debian.org/debian jessie main contrib non-free
+
+# SECURITY UPDATE REPOSITORY
+deb http://security.debian.org/ jessie/updates main contrib non-free
+deb-src http://security.debian.org/ jessie/updates main contrib non-free
+
+# PROPOSE UPDATE REPOSITORY
+deb http://ftp.br.debian.org/debian jessie-proposed-updates main contrib non-free
+deb-src http://ftp.br.debian.org/debian jessie-proposed-updates main contrib non-free
+#deb http://httpredir.debian.org/debian jessie-proposed-updates main contrib non-free
+#deb-src http://httpredir.debian.org/debian jessie-proposed-updates main contrib non-free
+
+# BACKPORT REPOSITORY
+#deb http://ftp.br.debian.org/debian jessie-backports main contrib non-free
+#deb-src http://ftp.br.debian.org/debian jessie-backports main contrib non-free
+#deb http://httpredir.debian.org/debian jessie-backports main contrib non-free
+#deb-src http://httpredir.debian.org/debian jessie-backports main contrib non-free
+
+# BACKPORT  REPOSITORY: http://backports.debian.org/Mirrors/
+#deb http://http.debian.net/debian jessie-backports main contrib non-free
+#deb-src http://http.debian.net/debian jessie-backports main contrib non-free
+
+# MULTIMEDIA REPOSITORY
+#deb http://ftp.br.debian.org/debian-multimedia/ jessie main
+#deb http://www.debian-multimedia.org jessie main
+
+# PHP5 BACKPORT
+#deb http://packages.dotdeb.org jessie all
+#deb-src http://packages.dotdeb.org jessie all
+
+# Nginx Official Repository
+deb http://nginx.org/packages/debian/ jessie nginx
+deb-src http://nginx.org/packages/debian/ jessie nginx
+
+# Docker Official Repository
+deb http://apt.dockerproject.org/repo debian-jessie main

@@ -1,0 +1,17 @@
+# Minute Hour Day Month Day_of_the_Week User Command
+#
+# Minute - You can use the follow (0-59)
+# Hour - You can use the follow (0-23)
+# Day - You can use the follow (1-31)
+# Month - You can use the follow (1-12)
+# Day of the Week - Day of the Week. (0-7; note.: 0 and 7 are Sunday).
+# Use - This is optional, you can define the user that run the job
+# Command - Command is the job that will be execute on the specified time
+# i.e: For to Schedule a task to execute each 8 hours: * */8 * * * user /path/to/task
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+MAILTO=""
+
+0 */8      *       *       *       /usr/bin/aptitude update
+0 */6      *       *       *       /usr/sbin/ntpdate -u a.ntp.br
+0 */12     *       *       *       /usr/bin/updatedb

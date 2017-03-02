@@ -1,0 +1,9 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\wbengine]
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\wbengine\SystemStateBackup]
+"ALlowSSBToAny"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Windows]
+"NoInteractiveServices"=dword:00000000

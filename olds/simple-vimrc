@@ -1,0 +1,25 @@
+" .vimrc - Defaults configurations
+" Maintainer:   Douglas Quintiliano dos Santos <https://github.com/douglasqsantos/>
+" Version:      1.0
+syntax enable
+"set tabstop=2
+"set shiftwidth=2
+"set softtabstop=2
+"set expandtab
+set laststatus=2
+set ruler
+set wildmenu
+set lazyredraw
+set backspace=indent,eol,start
+set complete-=i
+"set smarttab
+set nrformats-=octal
+set ttimeout
+set ttimeoutlen=100
+set incsearch
+set autoread
+map <F7> <esc>mz:%s/\s\+$//g<cr>`z
+highlight RedundantWhitespace ctermbg=red guibg=red
+match RedundantWhitespace /\s\+$\| \+\ze\t/
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [ASCII=\%03.3b]\ [HEX=\%02.2B]\ [line,column=%04l,%04v][%p%%]\ [LINES=%L]
+set laststatus=2

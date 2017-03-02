@@ -1,0 +1,8 @@
+##########################################################
+## ARQUIVO PARA CONFIGURACAO DE CLIENTE LINUX NO BACULA ##
+##########################################################
+
+        Catalog = Catalogo				# Nome do Catalogo definido
+        File Retention = 34 days                        # Tempo de Retencao do Backup
+        Job Retention = 34 days                         # Tempo de Retencao do Job
+        AutoPrune = yes                                 # Prune de Jobs/Arquivos Expirados
