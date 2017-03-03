@@ -264,8 +264,8 @@ cat << EOF > ${BACULA_BASE}/clients-jobs/monthly-client
 ##########################################################
 
         Catalog = Catalogo				# Nome do Catalogo definido
-        File Retention = 30 days                        # Tempo de Retencao do Backup
-        Job Retention = 1 months                        # Tempo de Retencao do Job
+        File Retention = 34 days                        # Tempo de Retencao do Backup
+        Job Retention = 34 days                        # Tempo de Retencao do Job
         AutoPrune = yes                                 # Prune de Jobs/Arquivos Expirados
 EOF
 
@@ -275,8 +275,8 @@ cat << EOF > ${BACULA_BASE}/clients-jobs/weekly-client
 ##########################################################
 
         Catalog = Catalogo				# Nome do Catalogo definido
-        File Retention = 7 days                         # Tempo de Retencao do Backup
-        Job Retention = 7 days                          # Tempo de Retencao do Job
+        File Retention = 8 days                         # Tempo de Retencao do Backup
+        Job Retention = 8 days                          # Tempo de Retencao do Job
         AutoPrune = yes                                 # Prune de Jobs/Arquivos Expirados
 EOF
 
@@ -452,10 +452,10 @@ Pool {
   Pool Type = Backup		      # O Tipo do Pool = Backup, Restore, Etc.
   Recycle = yes                       # Bacula can automatically recycle Volumes
   AutoPrune = yes                     # Prune expired volumes
-  Volume Retention = 1 month          # Retencao de Volume = 1 Mes
-  Volume Use Duration = 7 days      # Duracao de um volume aberto
+  Volume Retention = 34 days          # Retencao de Volume = 1 Mes
+  Volume Use Duration = 34 days      # Duracao de um volume aberto
   Maximum Volume Bytes = 20 Gb        # Tamanho maximo de um volume
-  Maximum Volumes      = 10           # Volume Bytes X Volumes <= Dispositivo de backup
+  Maximum Volumes      = 20           # Volume Bytes X Volumes <= Dispositivo de backup
   LabelFormat          = "volume-default-"     # Nome Default do Volume
 }
 EOF
@@ -474,7 +474,7 @@ cat << EOF > ${BACULA_BASE}/schedules/catalog.conf
 #        FEITO SEMPRE DEPOIS DOS BACKUPS            #
 Schedule {
   Name = "Catalog-Cycle"
-  Run = Level=Full sun-sat at 09:15
+  Run = Level=Full sun-sat at 23:00
 }
 EOF
 
@@ -762,9 +762,9 @@ EOF
 su -l bacula -s /bin/sh -c "cd /var/www/webacula/install/PostgreSql/ && ./10_make_tables.sh"
 su -l bacula -s /bin/sh -c "cd /var/www/webacula/install/PostgreSql/ && ./20_acl_make_tables.sh"
 
-chown -R www-data:www-data /var/www/webacula.conf
+chown -R www-data:www-data /var/www/webacula
 
-cat << EOF > /etc/apache2/sites-available/webacula
+cat << EOF > /etc/apache2/sites-available/webacula.conf
 <VirtualHost *:80>
         ServerAdmin webmaster@${DOMAIN}
         ServerName webacula.${DOMAIN}
