@@ -272,3 +272,8 @@ ${SED} -i 's/PermitRootLogin without-password/PermitRootLogin yes/g' /etc/ssh/ss
 
 # Rebooting the system for read all news configurations
 ${REBOOT}
+
+## PS1
+#export PS1='\[\033[01;31m\][\[\033[01;37m\]\t\[\033[01;31m\]] \[\033[01;33m\]\u\[\033[01;31m\]@\[\033[01;32m\]\h \[\033[01;31m\][\[\033[01;33m\]\w\[\033[01;31m\]] \[\033[01;37m\]\$ \[\033[00m\]'
+
+
